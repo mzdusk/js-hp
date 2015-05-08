@@ -1,0 +1,12 @@
+table.practice {
+    border: 1px solid #888;
+    width: 100%;
+}
+
+table.practice tbody tr:nth-child(2n+1) {
+    background-color: #eee;
+}
+
+table.practice tbody td {
+    padding-left: 1em;
+}
