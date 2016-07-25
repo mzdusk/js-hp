@@ -1,0 +1,30 @@
+div.concert {
+    h2 {
+	background-color: #ddd;
+	font-size: $base-font-size;
+	color: $text-color;
+	border-radius: 5px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 0;
+    }
+    h3 {
+	font-size: $base-font-size;
+	margin-bottom: 0;
+	&:before { content: "＜" }
+	&:after { content: "＞" }
+    }
+
+    div.body {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+
+	p.date {
+	    font-weight: bold;
+	}
+    }
+
+    p {
+	margin: 0.5em 0;
+    }
+}

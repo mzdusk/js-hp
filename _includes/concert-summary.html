@@ -1,0 +1,21 @@
+<h2>
+  {{ include.info.title }}
+  {% if include.info.subtitle %}<small>{{ include.info.subtitle }}</small>{% endif %}
+</h2>
+<div class="body">
+  <p class="date">
+    {{ include.info.date | date: "%Y年%-m月%-d日(%a)" }}<br />
+    {% if include.info.start %}
+    {{ include.info.start }}開演{% if include.info.open %} ({{ include.info.open }}開場){% endif %}<br />
+    {% endif %}
+    {{ include.info.place }}
+  </p>
+  {% if include.info.contents %}
+  <p>
+    <h3>曲目</h3>
+    {% for c in include.info.contents %}
+    {{ c.composer }}：{{ c.title }}<br />
+    {% endfor %}
+  </p>
+  {% endif %}
+</div>

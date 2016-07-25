@@ -1,0 +1,8 @@
+<h2>演奏会情報</h2>
+
+{% for p in site.tags.concert %}
+<div class="concert">
+  {% include concert-summary.html info=p %}
+  <p><a href="{{ p.url | prepend: site.baseurl }}">詳しくはこちら</a></p>
+</div>
+{% endfor %}

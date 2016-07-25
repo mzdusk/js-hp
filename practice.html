@@ -1,100 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <link href="/stylesheets/common.css" rel="stylesheet" media="all">
-    <link href="/stylesheets/practice.css" rel="stylesheet" media="all">
-    <title>練習日程: J'sチェロアンサンブル</title>
-  </head>
-  <body>
-    <div class="header">
-      <h1 class="title"><a href="/">J's Cello Ensemble</a></h1>
-    </div>
-    <div class="content">
-      <div>
-	<ul id="navigation">
-	  <li>
-	    <a href="/">トップページ</a>
-	  </li>
-	  <li>
-	    <a href="/profile.html">プロフィール</a>
-	  </li>
-	  <li>
-	    <a href="/concert.html">演奏会情報</a>
-	  </li>
-	  <li>
-	    <a href="/practice.html">練習日程</a>
-	  </li>
-	  <li>
-	    <a href="/recruit.html">団員募集</a>
-	  </li>
-	</ul>
-      </div>
+---
+layout: default
+title: 練習日程
+---
 
-      <h2>練習日程</h2>
-      <h3>2016年</h3>
-      <table class="practice">
-	<thead>
-	  <tr>
-	    <th>練習日</th>
-	    <th>練習場所</th>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-	    <td>5/8</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	  <tr>
-	    <td>5/21</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>6/4</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	  <tr>
-	    <td>6/11</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	  <tr>
-	    <td>7/3</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>7/16</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	  <tr>
-	    <td>8/6</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>8/27</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>9/17</td>
-	    <td>兵庫県立芸術文化センター スタジオ5</td>
-	  </tr>
-	  <tr>
-	    <td>9/25</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>10/10</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	  <tr>
-	    <td>10/23</td>
-	    <td>ピッコロシアター</td>
-	  </tr>
-	  <tr>
-	    <td>11/20</td>
-	    <td>大阪市 北区民センター</td>
-	  </tr>
-	</tbody>
-      </table>
-    </div>
-  </body>
-</html>
+<h2>{{ page.title }}</h2>
+<h3>2016年</h3>
+<table class="practice">
+  <thead>
+    <tr>
+      <th>練習日</th>
+      <th>練習場所</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in site.data.practice %}
+    <tr>
+      <td>{{ d.date | date: "%m/%d" }}</td>
+      <td>{{ d.place }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
