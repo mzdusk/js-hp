@@ -4,7 +4,6 @@ title: 練習日程
 ---
 
 <h2>{{ page.title }}</h2>
-<h3>2016年</h3>
 <table class="practice">
   <thead>
     <tr>
@@ -15,7 +14,7 @@ title: 練習日程
   <tbody>
     {% for d in site.data.practice %}
     <tr>
-      <td>{{ d.date | date: "%m/%d" }}</td>
+      <td>{{ d.date | date: "%Y/%m/%d" }}</td>
       <td>{{ d.place }}</td>
     </tr>
     {% endfor %}
