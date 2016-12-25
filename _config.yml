@@ -15,3 +15,5 @@ url: "http://jscelloensemble.web.fc2.com" # the base hostname & protocol for you
 markdown: kramdown
 
 exclude: ["Gemfile", "Gemfile.lock"]
+
+future: true

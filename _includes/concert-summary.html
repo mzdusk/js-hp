@@ -3,6 +3,11 @@
   {% if include.info.subtitle %}<small>{{ include.info.subtitle }}</small>{% endif %}
 </h2>
 <div class="body">
+  {% if include.info.poster %}
+    <a href="{{ site.baseurl }}/images/poster/{{ include.info.poster.name }}{{ include.info.poster.ext }}">
+      <img src="{{ site.baseurl }}/images/poster/{{ include.info.poster.name }}t{{ include.info.poster.ext }}" />
+    </a>
+  {% endif %}
   <p class="date">
     {{ include.info.date | date: "%Y年%-m月%-d日(%a)" }}<br />
     {% if include.info.start %}
