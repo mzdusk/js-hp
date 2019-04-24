@@ -7,14 +7,14 @@ title: 練習日程
 <table class="practice">
   <thead>
     <tr>
-      <th>練習日</th>
+      <th>練習日時</th>
       <th>練習場所</th>
     </tr>
   </thead>
   <tbody>
     {% for d in site.data.practice %}
     <tr>
-      <td>{{ d.date | date: "%Y/%m/%d" }}</td>
+      <td>{{ d.date | date: "%Y/%m/%d %H時" }}</td>
       <td>{{ d.place }}</td>
     </tr>
     {% endfor %}
